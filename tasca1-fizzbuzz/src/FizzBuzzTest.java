@@ -19,4 +19,16 @@ class FizzBuzzTest {
         assertEquals("Buzz",FizzBuzz.genera(5));
         assertEquals("Fizz",FizzBuzz.genera(6));
     }
+
+    @Test
+    void Test789(){
+        assertEquals("7",FizzBuzz.genera(7));
+        assertEquals("8",FizzBuzz.genera(8));
+        assertEquals("Fizz",FizzBuzz.genera(9));
+    }
+
+    @Test
+    void Test10(){
+        assertEquals("Buzz",FizzBuzz.genera(10));
+    }
 }
