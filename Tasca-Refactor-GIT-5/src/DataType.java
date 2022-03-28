@@ -10,6 +10,7 @@ public class DataType {
     public static String gd(int code){
         String tipoDato;
         if (isDate(code)) {
+
             tipoDato = "DATE";
         } else if (isNumeric(code)) {
             tipoDato = "NUMERIC";
