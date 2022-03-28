@@ -4,6 +4,7 @@ public class CovidIFs {
                                boolean isOver60yearsold, boolean hepatic,
                                boolean kidnevDisease, boolean respiratoryDisease, String provincia
     ){
+        String diagnostico;
         if (
                 (bodyTemperature>= 38 && difficultyBreathing) ||
                         (bodyTemperature>= 38 && difficultyBreathing && diabetes) ||
@@ -20,16 +21,17 @@ public class CovidIFs {
                         (bodyTemperature>= 38 && hepatic)||
                         (bodyTemperature>= 38 && kidnevDisease)||
                         (bodyTemperature>= 38 && respiratoryDisease)){
-            return "/diagnostico/"+provincia;
+            diagnostico = "/diagnostico/"+provincia;
         }
         else if(bodyTemperature>= 38){
-            return "/cuarentena/";
+            diagnostico = "/cuarentena/";
         }
         else if (bodyTemperature < 38){
-            return "/diagnostico_bueno/";
+            diagnostico = "/diagnostico_bueno/";
         }
         else{
-            return "/diagnostico_bueno/";
+            diagnostico = "/diagnostico_bueno/";
         }
+        return diagnostico;
     }
 }
