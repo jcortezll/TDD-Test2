@@ -29,5 +29,9 @@ class BracketsTest {
         assertFalse(brackets.verify(")()("));
         assertEquals(esperado,brackets.verify(")(3+2)("));
         assertEquals(esperado,brackets.verify("()())("));
+        //Test generalizats
+        assertFalse(brackets.verify("(())())"));
+        assertFalse(brackets.verify("())"));
+        assertFalse(brackets.verify("(()"));
     }
 }
