@@ -19,5 +19,15 @@ class BracketsTest {
         assertEquals(esperado,brackets.verify("(3+2)*(4+5)"));
         esperado=false;
         assertEquals(esperado,brackets.verify(")("));
+        assertEquals(esperado,brackets.verify("())("));
+        esperado=true;
+        assertEquals(esperado,brackets.verify("(())"));
+        assertEquals(esperado,brackets.verify("((3)^4)"));
+        assertEquals(esperado,brackets.verify("((()()))"));
+        assertEquals(esperado,brackets.verify("(((3*a)-(x+5)))"));
+        esperado=false;
+        assertFalse(brackets.verify(")()("));
+        assertEquals(esperado,brackets.verify(")(3+2)("));
+        assertEquals(esperado,brackets.verify("()())("));
     }
 }
