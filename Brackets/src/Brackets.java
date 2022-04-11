@@ -12,9 +12,7 @@ public class Brackets {
             }
         }
         if(seguir) {
-            if (cont1 == 0 && cont2 == 0) {
-                verified = true;
-            } else if (cont1 == cont2){
+            if (cont1 == cont2) {
                 verified = true;
             }
         }
