@@ -9,6 +9,9 @@ class BracketsTest {
         boolean esperado=true;
         Brackets brackets = new Brackets();
         assertEquals(esperado,brackets.verify(""));
-
+        assertEquals(esperado,brackets.verify("()"));
+        esperado=false;
+        assertEquals(esperado,brackets.verify("("));
+        assertEquals(esperado,brackets.verify(")"));
     }
 }
