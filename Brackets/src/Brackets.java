@@ -11,11 +11,9 @@ public class Brackets {
                 break;
             }
         }
-        if(seguir) {
-            if (cont1 == cont2) {
+        if (seguir && cont1 == cont2) {
                 verified = true;
             }
-        }
         return verified;
     }
 }
